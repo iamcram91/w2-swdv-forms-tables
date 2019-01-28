@@ -1,0 +1,189 @@
+<!---
+A four-column table with the following headings:
+Title - Place the book titles in this column - COMPLETE
+Author - List the author's name - COMPLETE
+Year - List the year the book was published - COMPLETE
+Links - List the links to sites about the book - COMPLETE
+A Web form as follows:
+Method = Post - COMPLETE
+Username field - COMPLETE
+Password field - COMPLETE
+Comment box - COMPLETE
+Submit button: submits the form - COMPLETE
+Clear button: clears the form - COMPLETE
+Action = submit.php - COMPLETE
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+table {
+    width:50%;
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+table, th, td {
+     border: 1px solid black;
+     border-collapse: collapse;
+}
+th, td {
+     padding: 15px;
+     text-align: left;
+}
+table#t01 tr:nth-child(even) {
+     background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+     background-color: black;
+     color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color:rgb(42, 122, 49);
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    margin-left: 100px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+input[type=reset] {
+    background-color: rgb(42, 122, 49);
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    width: 50%;
+    border-radius: 2px;
+    padding: 50px;
+    margin-left: 30%;
+
+}
+
+.form_column {
+    float: left;
+    width: 10%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+</style>
+</head>
+<body>
+
+<h2 align="center">SWDV Week 2 Assignemnt </h2>
+<h3 align="center">Tables & Forms - Favorite Books </h3>
+    <table id="t01">
+    <tr>
+        <th>Title</th>
+        <th>Author</th> 
+        <th>Year</th>
+        <th>Links</th>
+    </tr>
+    <tr>
+        <td>The Adventures of Huckleberry Finn by Mark Twain</td>
+        <td>Mark Twain</td>
+        <td>1884</td>
+        <td><a href="https://www.sparknotes.com/lit/huckfinn/">Book Information</a>
+            <br>
+            <a href="https://www.amazon.com/Adventures-Huckleberry-Finn-Mark-Twain/dp/1503214958/ref=pd_lpo_sbs_14_t_0/138-6685518-3672559?_encoding=UTF8&psc=1&refRID=90F04CXP24W8664SM7PA">Purchase Book</a></td>
+    </tr>
+    <tr>
+        <td>And Then There Were None</td>
+        <td>Agatha Christie</td>
+        <td>1939</td>
+        <td><a href="https://www.sparknotes.com/lit/andthenthere/summary/">Book Information</a>
+            <br>
+            <a href="https://www.amazon.com/Then-There-Were-None/dp/0062073486/ref=sr_1_1?s=books&ie=UTF8&qid=1548630939&sr=1-1&keywords=And+Then+There+Were+None">Purchase Book</a></td>
+    </tr>
+        <tr>
+        <td>A Tale of Two Cities</td>
+        <td>Charles Dickens</td>
+        <td>1859</td>
+        <td><a href="https://www.sparknotes.com/lit/twocities/summary/">Book Information</a>
+            <br>
+            <a href="https://www.amazon.com/Tale-Two-Cities-Charles-Dickens/dp/1503219704/ref=sr_1_1_sspa?s=books&ie=UTF8&qid=1548631050&sr=1-1-spons&keywords=A+Tale+of+Two+Cities&psc=1">Purchase Book</a></td>
+    </tr>
+        <tr>
+        <td>Jurrasic Park</td>
+        <td>Michael Crichton</td>
+        <td>1990</td>
+        <td><a href="https://www.sparknotes.com/lit/jurassicpark/summary/">Book Information</a>
+            <br>
+            <a href="https://www.amazon.com/Jurassic-Park-Novel-Michael-Crichton/dp/0345538986/ref=sr_1_1?s=books&ie=UTF8&qid=1548631106&sr=1-1&keywords=Jurrasic+Park+novel">Purchae Book</a></td>
+    </tr>
+    </table>
+    <div class="container">
+         <form action="/user_information_page.php" method="POST" id="user information">
+            <div class="row">
+                <div class="form_column">
+                <label for="username">Username</label>
+                </div>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+            <div class="row">
+                <div class="form_column">
+                <label for="password">Password</label>
+                </div>
+                <input type="text" id="password" name="password" placeholder="Enter your password">
+            </div>
+            <div class="row">
+            </div>
+            <div class="row">
+                <div class="form_column">
+                <label for="user_input">User Input</label>
+                </div>
+                <textarea id="user_input" name="subject" placeholder="Enter text or comments here." style="height:200px"></textarea>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+                </div>
+        </form>
+    </div>
+
+</body>
+</html>
+
